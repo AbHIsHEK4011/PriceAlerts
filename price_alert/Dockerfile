@@ -6,20 +6,17 @@ FROM python:3.9-slim
 # Set the working directory in the container
 WORKDIR /code
 
-# Copy the requirements file into the container at /code
-COPY requirements.txt /code/
 
-# Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+ENV PYTHONDOWNWRITEBYTECODE 1
+ENV PYTHONNUNBUFFER 1
 
-# Copy the rest of the code
-COPY . /code/
+# update and  install dependencies
+RUN pip install --upgrade pip
+COPY ./requirements.txt /price_alert/requirements.txt
+RUN pip install -r /price_alert/requirements.txt
 
-# Make port 8000 available to the world outside this container
+# copy project
+COPY . .
+
+# Expose the port server is running on
 EXPOSE 8000
-
-# Define environment variable
-ENV DJANGO_SETTINGS_MODULE=price_alerts.settings
-
-# Run the command to start the server
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
