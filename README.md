@@ -4,7 +4,7 @@ Project given by tanX.fi
 
 ## Features
 
-- As per Instruction Run on locaolhost:8000/...
+- As per Instruction Run on localhost:8000/...
 ## Installation
 
 To set up and run this project locally, follow these steps:
