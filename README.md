@@ -81,11 +81,6 @@ cd project
     - **Method**: `GET`
     - **Headers**: `Authorization: Bearer <access_token>`
 
-- **Update Alert**:
-    - **URL**: `/api/alerts/{id}/`
-    - **Method**: `PUT`
-    - **Request Body**: `{ "cryptocurrency": "BTC", "target_price": 32000.0, "status": "created" }`
-
 - **Delete Alert**:
     - **URL**: `/api/alerts/{id}/`
     - **Method**: `DELETE`
