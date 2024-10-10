@@ -1,7 +1,4 @@
 # Price Alerts
-
-Project given by tanX.fi
-
 ## Features
 
 - As per Instruction Run on localhost:8000/...
